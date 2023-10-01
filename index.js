@@ -28,3 +28,34 @@ document.addEventListener("keydown",function(e){
     moveDodgerRight();
 });
 
+function moveDodgerUp(){
+    const bottomNumbers=dodger.style.bottom.replace(`px`,``)
+   const bottom= parseInt(bottomNumbers,10)
+
+   if (bottom<100){
+    dodger.style.bottom = `${bottom+1}px`;
+   }
+}
+
+document.addEventListener(`keydown`, function(e){
+    if (e.key==="ArrowUp"){
+        moveDodgerUp();
+    }
+});
+
+
+// Needs Further Research
+function moveDodgerDown() {
+    const bottomNumbers = dodger.style.bottom.replace('px', '');
+    const bottom = parseInt(bottomNumbers, 10);
+
+    if (bottom > 0) {
+        dodger.style.bottom = `${bottom - 1}px`;
+    }
+}
+
+document.addEventListener(`keydown`,function(e){
+    if(e.key===`ArrowDown`){
+        moveDodgerDown
+    }
+})
